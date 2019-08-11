@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+
+	<body>
+
+    <div class="menu">
+        <nav>
+            <ul class="lista">
+                <li> <a class="menu" href="/">Home</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+    <div>
+    
+      <div class="divform">
+            <form class="" method="POST">
+                <fieldset class="formjogo">
+                    <legend>
+                        <h2>Novo Jogo</h2>
+                    </legend>
+
+                    Nome: <input type="text" name="nome"><br /><br />
+                    Numero de chute: <input type="number" name="numeroChute" value="0"><br /><br />
+
+                    <button type="submit">Jogar</button>
+                </fieldset>
+            </form>
+            
+            
+        </div>
+
+
+    </div>
+
+    <div class="erro" th:each="erros : ${erros}">
+        <h2 th:text="${erros}"></h2>
+
+    </div>
+
+    <div class="mensagem" th:each="mensagem : ${mensagens}">
+        <h2 th:text="${mensagem}"></h2>
+    </div>
+
+</body>
+
+</html>

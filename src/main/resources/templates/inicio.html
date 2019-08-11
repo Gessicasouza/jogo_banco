@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+    <div>
+        <div class="menu">
+            <nav>
+                <ul class="lista">
+                    <li> <a class="menu" href="/partida"> Play Gamer</a> </li>
+
+                </ul>
+            </nav>
+        </div>
+<div class="jogarores">
+            <h1>Lista de Ganhadores do jogo de adivinhação</h1>
+
+
+            <ul class="ganhadores" th:each="ganhador : ${ganhadores}">
+                <li th:text="'Nome: '+${ganhador.nome}"></li>
+                <li>| </li>
+                <li th:text="'Numero jogado: '+${ganhador.numeroChute}"></li>
+                <li>| </li>
+                <li th:text="'Numero Aleatorio: '+${ganhador.numeroAleatorio.numero}"></li><br>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
